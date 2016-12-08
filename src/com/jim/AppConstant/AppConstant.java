@@ -10,6 +10,7 @@ public interface AppConstant {
 	public final String FILE_NAME = "resources.xml";
 	public final String DOWNLOAD_XML_URL = "http://" + SERVER_ADDR + DIR
 					+ FILE_NAME;
-	//public final String DOWNLOAD_XML_URL = "http://192.168.0.15/mp3list/resources.xml";
+	public final String DOWNLOAD_MP3_PATH = "http://" + SERVER_ADDR + DIR;
 
+	//public final String DOWNLOAD_XML_URL = "http://192.168.0.15/mp3list/resources.xml";
 }

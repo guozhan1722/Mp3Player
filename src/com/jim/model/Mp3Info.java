@@ -1,6 +1,12 @@
 package com.jim.model;
 
-public class Mp3Info {
+import java.io.Serializable;
+
+public class Mp3Info implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	String id;
 	String mp3Name;
 	String mp3Size;

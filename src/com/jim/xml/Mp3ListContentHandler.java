@@ -45,30 +45,24 @@ public class Mp3ListContentHandler extends DefaultHandler
 		if (tagName.equals("id"))
 		{
 			mp3Info.setId(tmp);
-		} else if (tagName.equals("mp3.name"))
+		}
+		else if (tagName.equals("mp3.name"))
 		{
 			mp3Info.setMp3Name(tmp);
-		} else if (tagName.equals("mp3.size"))
+		}
+		else if (tagName.equals("mp3.size"))
 		{
 			mp3Info.setMp3Size(tmp);
-		} else if (tagName.equals("lrc.name"))
+		}
+		else if (tagName.equals("lrc.name"))
 		{
 			mp3Info.setLrcName(tmp);
-		} else if (tagName.endsWith("lrc.size"))
+		}
+		else if (tagName.endsWith("lrc.size"))
 		{
 			mp3Info.setLrcSize(tmp);
 		}
 
-	}
-
-
-	@Override
-	public void endDocument() throws SAXException
-	{
-		// TODO Auto-generated method stub
-		System.out.println("endDocument");
-		super.endDocument();
-		
 	}
 
 	@Override
@@ -76,19 +70,11 @@ public class Mp3ListContentHandler extends DefaultHandler
 					throws SAXException
 	{
 
-		if(localName.equals("resource"))
+		if (localName.equals("resource"))
 		{
-			System.out.println("end of element" + mp3Info);
 			infos.add(mp3Info);
 		}
 		tagName = "";
-	}
-
-	@Override
-	public void startDocument() throws SAXException
-	{
-		// TODO Auto-generated method stub
-		super.startDocument();
 	}
 
 	@Override
